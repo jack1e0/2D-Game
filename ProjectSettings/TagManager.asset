@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Building
+  - Dog
+  - Ground
+  - Man
+  - Point
+  - Block
+  - Women
+  - Police
+  - Victim
+  - Corpse
+  - Blood
+  - Text
+  - Characters
+  - Slow
+  - Stop
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Clouds
+    uniqueID: 1267353383
+    locked: 0
+  - name: Building
+    uniqueID: 2164854145
+    locked: 0
+  - name: Ground
+    uniqueID: 1056146915
+    locked: 0
+  - name: Block
+    uniqueID: 1192201269
+    locked: 0
+  - name: Dog
+    uniqueID: 198626819
+    locked: 0
+  - name: Man
+    uniqueID: 79662375
+    locked: 0
+  - name: Point
+    uniqueID: 2101028301
+    locked: 0
+  - name: Text
+    uniqueID: 2538020273
+    locked: 0
