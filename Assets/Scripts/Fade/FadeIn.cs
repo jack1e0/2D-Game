@@ -6,7 +6,7 @@ public class FadeIn : MonoBehaviour
 {
     public GameObject thing;
     SpriteRenderer spriteRenderer;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,21 +16,19 @@ public class FadeIn : MonoBehaviour
         spriteRenderer.material.color = color;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D doge)
     {
         if (doge.gameObject.tag == "Dog")
         {
-            startFadeIn();
+            StartFadeIn();
         }
     }
 
-    //fadein
+    public void StartFadeIn()
+    {
+        StartCoroutine(FadingIn());
+    }
+
     IEnumerator FadingIn()
     {
         for (float f = 0.05f; f < 1; f += 0.03f)
@@ -41,13 +39,4 @@ public class FadeIn : MonoBehaviour
             yield return new WaitForSeconds(0.07f);
         }
     }
-
-    public void startFadeIn()
-    {
-        StartCoroutine(FadingIn());
-    }
-
-
-    //fadeout
-
 }

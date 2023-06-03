@@ -5,19 +5,25 @@ using UnityEngine.Audio;
 
 public class Audio : MonoBehaviour
 {
+    public static Audio instance;
     public AudioSource bgm;
-    private float timeTaken = 2f;
+    private float timeTaken = 4f;
     private float timeElapsed = 0f;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        if (newDogMotion.audioDec == true)
+        if (instance == null)
         {
-            
-                bgm.volume = Mathf.Lerp(1, 0, timeElapsed / timeTaken);
-                timeElapsed += Time.deltaTime;
-            
+            instance = this;
+        }
+    }
+    public IEnumerator DecreaseAudio()
+    {
+        while (bgm.volume > 0)
+        {
+            bgm.volume = Mathf.Lerp(1, 0, timeElapsed / timeTaken);
+            timeElapsed += Time.deltaTime;
+            yield return null;
         }
     }
 }

@@ -2,25 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+///
+/// Making close button white to black, for visibility
+///
 public class CloseButton : MonoBehaviour
 {
+    public static CloseButton instance;
     public Animator animator;
 
-
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        if (newDogMotion.hasEnded == true)
+        if (instance == null)
         {
-            StartCoroutine(endThisShitPls());
+            instance = this;
         }
     }
 
-    IEnumerator endThisShitPls()
+    public IEnumerator EndGame()
     {
         yield return new WaitForSeconds(6);
         animator.SetTrigger("Quit");
-        
-       
     }
 }
